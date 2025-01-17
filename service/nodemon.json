@@ -1,0 +1,5 @@
+{
+  "exec": "ts-node -r tsconfig-paths/register server.ts",
+  "watch": ["service/**/*.ts"],
+  "ext": "ts"
+}

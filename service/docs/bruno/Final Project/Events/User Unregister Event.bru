@@ -1,0 +1,20 @@
+meta {
+  name: User Unregister Event
+  type: http
+  seq: 2
+}
+
+delete {
+  url: http://localhost:3001/api/users/events/unregister
+  body: none
+  auth: bearer
+}
+
+headers {
+  eventId: {{eventId}}
+  userId: {{userId}}
+}
+
+auth:bearer {
+  token: {{token}}
+}

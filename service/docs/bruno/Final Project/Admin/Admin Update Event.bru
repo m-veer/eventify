@@ -1,0 +1,25 @@
+meta {
+  name: Admin Update Event
+  type: http
+  seq: 7
+}
+
+patch {
+  url: http://localhost:3001/api/admin/events
+  body: json
+  auth: bearer
+}
+
+headers {
+  eventId: {{eventId}}
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "location": "Tokyo"
+  }
+}

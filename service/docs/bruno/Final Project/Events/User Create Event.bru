@@ -1,0 +1,46 @@
+meta {
+  name: User Create Event
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://localhost:3001/api/users/events
+  body: json
+  auth: bearer
+}
+
+params:query {
+  ~: 
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "name": "t",
+    "eventTypes": [
+      "Comedy",
+      "Networking",
+      "Music"
+    ],
+    "description": "d",
+    "date": "2024-12-22",
+    "time": "09:08",
+    "locationType": "in-person",
+    "location": "1 Smith Street, Boston, Massachusetts 02120",
+    "price": 0,
+    "totalTickets": 9,
+    "availableTickets": 9,
+    "tags": [
+      "comedy",
+      "music"
+    ],
+    "imageUrl": "",
+    "ageRestriction": "There's an age restriction",
+    "doorTime": "1 Hours",
+    "parkingInfo": "Paid parking"
+  }
+}

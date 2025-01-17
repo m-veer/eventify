@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  background-color: #1a1a1a;
+}
+
+#root {
+  width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Hero section styles */
+.hero {
+  width: 100%;
+  background: linear-gradient(to bottom, #FF4500, #1a1a1a);
+  padding: 40px 0;
+}
+
+/* Event sections */
+.events-section {
+  width: 100%;
+  padding: 20px 0;
+}
+
+/* Cards container */
+.cards-wrapper {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.cards-container {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  padding: 0 20px;
+}
+
+/* MUI overrides */
+.MuiContainer-root {
+  max-width: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  width: 100%;
+}
+
+/* Utility classes */
+.full-width {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Remove any fixed widths */
+.content-wrapper {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+  .cards-container {
+    padding: 0 10px;
+  }
+}

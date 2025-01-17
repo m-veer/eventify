@@ -1,0 +1,22 @@
+meta {
+  name: User Admin Signup
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:3001/api/users/signup
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "firstName": "Admin",
+    "lastName": "Test",
+    "email": "admintest@northeastern.edu",
+    "password": "Password@123",
+    "isAdmin": true,
+    "isAdminPassword": "Admin.Creation.Password@123"
+  }
+}

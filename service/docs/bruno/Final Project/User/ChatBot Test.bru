@@ -1,0 +1,17 @@
+meta {
+  name: ChatBot Test
+  type: http
+  seq: 6
+}
+
+post {
+  url: http://localhost:3001/api/chatbot/suggest-events
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+      "prompt": "I want to attend Tech or Comedy events near me planned from 4th December, 2024 to 16th December, 2024"
+  }
+}

@@ -1,0 +1,25 @@
+meta {
+  name: User Update Event
+  type: http
+  seq: 5
+}
+
+patch {
+  url: http://localhost:3001/api/users/events
+  body: json
+  auth: bearer
+}
+
+headers {
+  eventId: {{eventId}}
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "location": "Boston"
+  }
+}

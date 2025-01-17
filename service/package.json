@@ -1,0 +1,48 @@
+{
+  "name": "eventify-api",
+  "version": "1.0.0",
+  "description": "REST APIs for managing events and users",
+  "main": "server.ts",
+  "scripts": {
+    "start": "node server.ts",
+    "dev": "nodemon",
+    "dev test": "nodemon server.ts",
+    "test": "jest --detectOpenHandles",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/jsonwebtoken": "^9.0.7",
+    "@types/mongoose": "^5.11.96",
+    "@types/stripe": "^8.0.416",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "eventify-api": "file:",
+    "express": "^4.21.2",
+    "express-rate-limit": "^6.7.0",
+    "helmet": "^6.1.5",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^7.8.3",
+    "morgan": "^1.10.0",
+    "stripe": "^17.4.0",
+    "winston": "^3.17.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/morgan": "^1.9.9",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "eslint": "^8.38.0",
+    "jest": "^29.5.0",
+    "nodemon": "^2.0.22",
+    "supertest": "^6.3.3",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.7.2"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

@@ -1,0 +1,23 @@
+meta {
+  name: User Login
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:3001/api/users/login
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "email": "ILoveNodeJS@microsoft.com",
+    "password": "Password@123"
+  }
+}
+
+script:post-response {
+  let data = res.body;
+  bru.setEnvVar("token", data.data.token);
+}

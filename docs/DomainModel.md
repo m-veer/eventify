@@ -1,108 +1,4 @@
-# Eventify
-
-A robust REST API system for managing events and ticket bookings. This system allows users to create, manage, and book events, with comprehensive admin controls and user management features.
-
-## Features
-
-- User Authentication & Authorization
-- Event Management
-- Ticket Booking System
-- Admin Dashboard
-- Event Reporting System
-- Secure API Endpoints
-- MongoDB Integration
-- JWT Authentication
-
-## Tech Stack
-
-- Node.js
-- Express.js
-- MongoDB Atlas
-- JWT for Authentication
-- Various NPM packages for security and functionality
-
-## Project Structure
-
-```
-📦 eventify
- ┣ 📂 api
- ┃ ┣ 📂 docs
- ┃ ┃ ┗ 📂 openapi
- ┃ ┣ 📂 service
- ┃ ┃ ┣ 📂 controllers
- ┃ ┃ ┣ 📂 models
- ┃ ┃ ┣ 📂 routers
- ┃ ┃ ┣ 📂 services
- ┃ ┃ ┗ 📜 app.js
- ┃ ┣ 📜 .env
- ┃ ┣ 📜 .gitignore
- ┃ ┗ 📜 server.js
-```
-
-## Setup Instructions
-
-1. Clone the repository
-
-```bash
-git clone <repository-url>
-cd eventify
-```
-
-2. Install dependencies
-
-```bash
-npm install
-```
-
-3. Set up environment variables
-   Create a `.env` file in the root directory with the following variables:
-
-```env
-PORT=9000
-MONGODB_URI=your_mongodb_connection_string
-JWT_SECRET=your_jwt_secret
-JWT_EXPIRY=24h
-```
-
-4. Start the server
-
-```bash
-# Development mode
-npm run dev
-```
-
-## API Documentation
-
-The API is documented using OpenAPI specification. You can find the full documentation in the `/api/docs/openapi` directory.
-
-### Key Endpoints
-
-- `/api/users/signup` - User registration
-- `/api/users/login` - User authentication
-- `/api/events` - Event management
-- `/api/admin/*` - Admin endpoints
-- `/api/events/:eventId/register` - Event registration
-
-## Security Features
-
-- JWT Authentication
-- Password Hashing
-- Rate Limiting
-- CORS Protection
-- Security Headers
-- Request Validation
-
-## Error Handling
-
-The API implements comprehensive error handling with appropriate HTTP status codes and error messages.
-
-## Contributing
-
-1. Fork the repository
-2. Create your feature branch
-3. Commit your changes
-4. Push to the branch
-5. Open a Pull Request
+#Domain Model for Eventify Website
 
 ```mermaid
 ---
@@ -189,7 +85,7 @@ classDiagram
         +manageEvents()
         +handleReports()
     }
-
+    
     class Payment {
         <<Service>>
         +UUID id
@@ -201,7 +97,7 @@ classDiagram
         +processPayment()
         +refundPayment()
     }
-
+    
     class EventType {
         <<enumeration>>
         CONFERENCE
@@ -220,7 +116,7 @@ classDiagram
         PERFORMANCE
         PRIVATE_PARTY
     }
-
+    
     class EventStatus{
         <<enumeration>>
         UPCOMING
@@ -249,5 +145,4 @@ classDiagram
     Admin "*" -- "*" User : manages
     Admin "*" -- "*" Event : oversees
 
-```
-STREAM LINK - https://northeastern-my.sharepoint.com/:v:/r/personal/darji_ru_northeastern_edu/Documents/Recordings/Microsoft%20Teams%20meeting-20241207_232709-Meeting%20Recording.mp4?csf=1&web=1&e=YKEqod&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D
+```    

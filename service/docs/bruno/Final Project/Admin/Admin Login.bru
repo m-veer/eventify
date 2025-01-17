@@ -1,0 +1,23 @@
+meta {
+  name: Admin Login
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:3001/api/admin/login
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "email": "admin@northeastern.edu",
+    "password": "Password@123"
+  }
+}
+
+script:post-response {
+  let data = res.body;
+  bru.setEnvVar("token", data.data.token);
+}

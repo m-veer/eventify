@@ -1,0 +1,19 @@
+meta {
+  name: User Delete Event
+  type: http
+  seq: 6
+}
+
+delete {
+  url: http://localhost:3001/api/users/events/
+  body: none
+  auth: bearer
+}
+
+headers {
+  eventId: {{eventId}}
+}
+
+auth:bearer {
+  token: {{token}}
+}
