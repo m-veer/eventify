@@ -1,4 +1,4 @@
-# Eventify API
+# Eventify
 
 A robust REST API system for managing events and ticket bookings. This system allows users to create, manage, and book events, with comprehensive admin controls and user management features.
 
